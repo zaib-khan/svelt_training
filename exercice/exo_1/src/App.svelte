@@ -44,16 +44,15 @@
       >
     </div>
     {#if isListDisplayed}
-        {#each tabLegumes as { isConnect, time }, index}
-          <p class=" mt-2 ml-4">
-            {index + 1}. {isConnect ? "Connexion" : "Déconnexion"} à {time}
-          </p>
-        {/each}
-      {/if}
+      {#each tabLegumes as { isConnect, time }, index}
+        <p class=" mt-2 ml-4">
+          {index + 1}. {isConnect ? "Connexion" : "Déconnexion"} à {time}
+        </p>
+      {/each}
     {:else}
       <button
         class=" px-4 py-2 rounded shadow bg-green-600 text-white duration-200 hover:bg-green-900"
-        on:click={toggleLogin}>Log in</button
+        >Log in</button
       >
     {/if}
   </main>
