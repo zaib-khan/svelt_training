@@ -1,5 +1,39 @@
 <script>
   import "./assets/css/style.css";
+  import DropDown from "./DropDown.svelte";
+
+  let countries = [
+    {
+      id: 1,
+      src: "https://countryflagsapi.com/png/be",
+      country: "Belgium",
+    },
+    {
+      id: 2,
+      src: "https://countryflagsapi.com/png/it",
+      country: "Italy",
+    },
+    {
+      id: 3,
+      src: "https://countryflagsapi.com/png/fr",
+      country: "France",
+    },
+    {
+      id: 4,
+      src: "https://countryflagsapi.com/png/ga",
+      country: "Gabon",
+    },
+    {
+      id: 5,
+      src: "https://countryflagsapi.com/png/us",
+      country: "United State",
+    },
+    {
+      id: 6,
+      src: "https://countryflagsapi.com/png/sr",
+      country: "Suriname",
+    },
+  ];
 </script>
 
 <div class="bg-slate-50 flex flex-col min-h-screen">
@@ -10,7 +44,7 @@
   </header>
   <main class="container mx-auto m-8 border-2 border-dashed rounded p-8">
     <!-- CONTENU ICI -->
-    Votre contenu ici !
+    <DropDown tabCountries={countries} />
   </main>
 </div>
 
